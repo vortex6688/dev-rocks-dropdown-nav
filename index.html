@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drop Down Navigation</title>
+    <meta name="description" content="Drop Down Navigation">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- navigation icon element, triggers show/hide the navigations event -->
+    <img class="icon" src="images/nav-icon.svg" />
+    <!-- navigation block, will be shown or hidden when the icon is clicked on -->
+    <nav class="hidden">
+      <a href=""><h2>Home</h2></a>
+      <a href=""><h2>Portfolio</h2></a>
+      <a href=""><h2>About Us</h2></a>
+    </nav>
+  </header>
+  <!-- just some randon content for this example, website title and slogan of some kind -->
+  <h1>Dropdown Navigation</h1>
+  <h2>Is really that simple</h2>
+
+  <script>
+    const navTrigger = document.querySelector(".icon")
+    const nav = document.querySelector("nav")
+    navTrigger.addEventListener('click', () => {
+      nav.classList.toggle("hidden")
+      navTrigger.classList.toggle("open")
+    })
+  </script>
+</body>
+</html>
