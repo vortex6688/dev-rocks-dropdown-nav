@@ -69,3 +69,8 @@ nav.hidden {
   /* transition gives a nice animation effect */
   transition: 0.5s
 }
+
+/* make some space around the h1 title tag to make the content look a bit better */
+h1 {
+  margin: 60px 0;
+}
