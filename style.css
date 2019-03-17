@@ -34,17 +34,6 @@ nav {
   box-sizing: border-box;
   /* push the content under the navigation a bit down */
   margin-bottom: 50px;
-  /* set fixed height for the navigation block so it could be pulled off the screen by exact size of it */
-  height: 50px;
-  /* transition gives a nice animation effect */
-  transition: 0.5s
-}
-
-/* Navigation styles applied when it has a "hidden" state */
-nav.hidden {
-  margin-top: -50px;
-  /* transition gives a nice animation effect */
-  transition: 0.5s
 }
 
 /* Navigation icon styles */
@@ -58,14 +47,6 @@ nav.hidden {
   top: 10px;
   /* Hovering over an icon will transform the cursor into a pointer to show that element is cliackable */
   cursor: pointer;
-  /* transition gives a nice animation effect */
-  transition: 0.5s
-}
-
-/* Navigation icon animation styles when clicked */
-.icon.open {
-  /* this icon position is pointing down, reflecting it's action if it would be clicked, which will pull the navigation up and hide it off the screen  */
-  transform: rotate(180deg);
   /* transition gives a nice animation effect */
   transition: 0.5s
 }
