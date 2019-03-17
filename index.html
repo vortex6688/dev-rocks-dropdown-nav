@@ -14,44 +14,43 @@
   <!-- navigation icon element, triggers show/hide the navigations event -->
   <img class="icon" src="images/nav-icon.svg" />
 
-  <style>
-    /* Navigation icon styles */
-    .icon {
-      /* transition gives a nice animation effect */
-      transition: 0.5s
-    }
-
-    /* Navigation icon animation styles when clicked */
-    .icon.open {
-      /* this icon position is pointing down, reflecting it's action if it would be clicked, which will pull the navigation up and hide it off the screen  */
-      transform: rotate(180deg);
-      /* transition gives a nice animation effect */
-      transition: 0.5s
-    }
-  </style>
-
-  <!-- navigation block, will be shown or hidden when the icon is clicked on -->
+  <!-- Navigation block, will be shown or hidden when the icon is clicked on -->
   <nav class="hidden">
     <a href=""><h2>Home</h2></a>
     <a href=""><h2>Portfolio</h2></a>
     <a href=""><h2>About Us</h2></a>
   </nav>
-
+  
+  <!-- Styles to control the events triggered by the nav icon element on click -->
   <style>
-    /* Navigation styles */
-    nav {
-      /* set fixed height for the navigation block so it could be pulled off the screen by exact size of it */
-      height: 50px;
-      /* transition gives a nice animation effect */
-      transition: 0.5s
-    }
+  /* Navigation style */
+  nav {
+    /* set fixed height for the navigation block so it could be pulled off the screen by exact size of it */
+    height: 50px;
+    /* transition gives a nice animation effect */
+    transition: 0.5s;
+  }
+  /* Navigation styles applied when it has a "hidden" state */
+  nav.hidden {
+    /* pull the navigation off the screen to hide it */
+    margin-top: -50px;
+    /* transition gives a nice animation effect */
+    transition: 0.5s;
+  }
 
-    /* Navigation styles applied when it has a "hidden" state */
-    nav.hidden {
-      margin-top: -50px;
-      /* transition gives a nice animation effect */
-      transition: 0.5s
-    }
+  /* Navigation icon styles */
+  .icon {
+    /* transition gives a nice animation effect */
+    transition: 0.5s;
+  }
+
+  /* Navigation icon animation styles when clicked */
+  .icon.open {
+    /* this icon position is pointing down, reflecting it's action if it would be clicked, which will pull the navigation up and hide it off the screen  */
+    transform: rotate(180deg);
+    /* transition gives a nice animation effect */
+    transition: 0.5s;
+  }
   </style>
 
   <!-- just some randon content for this example, website title and slogan of some kind -->
@@ -74,6 +73,5 @@
       navTrigger.classList.toggle("open")
     })
   </script>
-
 </body>
 </html>
